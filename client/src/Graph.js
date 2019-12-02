@@ -1,6 +1,9 @@
 import React from "react"
+
 class Graph extends React.Component {
-    state = {}
+    state = {
+      features: ["danceability", "acousticness", "energy", "liveness"]
+    }
   
      renderLines() {
       return Array(10).fill(null).map((el, i) => (
@@ -10,41 +13,39 @@ class Graph extends React.Component {
         />
       ))
     }
-  
     renderBars() {
-    //   const { currencies } = this.props;
-      
-    //   let sumOfAllCurrencies = currencies.reduce((acc, currency) => {
-    //     return acc + currency.marketCap;
-    //   }, 0);
-      
-    //   return currencies.map((currency) => {
-    //     const percent = (currency.marketCap / sumOfAllCurrencies) * 100; 
-    //     return (
-    //       <Bar 
-    //         percent={percent}
-    //         key={currency.currencyName}
-    //       />
-    //     )
-    //   });
         return (
-            <Bar 
+            [<Bar 
                 percent= {(this.props.item.danceability * 100) / 0.9}
-            />
+            />, 
+            <Bar 
+                percent= {(this.props.item.energy * 100) / 0.9}
+            />]
         )
     }
   
     render() {
+      let planet = this.state.features.map(data => {
+        return(
+          <BarTextContent currencies = {data} />
+        )
+      })
+      let planet2 = this.state.features.map(data => {
+        return(
+          <Bar percent= {(this.props.item.data * 100) / 0.9}/>
+        )
+      })
       return (
         <div className="graph-wrapper">
           <h2> { this.props.graphTitle } </h2>
           
           <div className="graph">
-            <BarTextContent currencies={this.props.currencies} />
-            
+            <div className="bar-text-content">
+              {planet}
+            </div>
             <div className="bar-lines-container">
               { this.renderLines() }
-              { this.renderBars() }
+              {planet2}
             </div>
             
             <div style={{ width: '12%' }} />
@@ -80,18 +81,9 @@ class Graph extends React.Component {
   
   const BarTextContent = ({ currencies }) => {
     return (
-      <div className="bar-text-content">
-        {/* {
-          currencies.map((currency) => (
-            <div className="text">
-              {currency.currencyName }
-            </div>
-          ))
-        } */}
         <div className="text">
-            danceability
+            {currencies}
         </div>
-      </div>
     )
   }
   
