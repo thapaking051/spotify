@@ -7,7 +7,7 @@ class NowPlaying extends React.Component{
     render(){
         return(
             <div>
-                 <div>{ this.props.nowPlaying.name }</div>
+                <div>{ this.props.nowPlaying.name }</div>
                 <img src={this.props.nowPlaying.albumArt} style={{ height: 150 }}/>
             </div>
         )
