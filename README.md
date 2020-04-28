@@ -1,0 +1,3 @@
+# spotify
+
+![Image of Yaktocat](https://github.com/thapaking051/spotify/blob/master/image/nowplaying.PNG)
