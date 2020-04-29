@@ -2,7 +2,7 @@
 
 Can be found at spotify-personal.herokuapp.com
 
-### App was made using the Spotify API. Through the help of React, Materialize and basic HTML and CSS the app extracts data from signed in users and displays data not found in the offical Spotify App and website. Below are examples of what the site looks like.
+App was made using the Spotify API. Through the help of React, Materialize and basic HTML and CSS the app extracts data from signed in users and displays data not found in the offical Spotify App and website. Below are examples of what the site looks like.
 
 ### If the user is playing a song they can pause and skip to previous or next through the app
 ![Image of Yaktocat](https://github.com/thapaking051/spotify/blob/master/image/nowplaying.PNG)
