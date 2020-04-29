@@ -1,6 +1,6 @@
 # SPOTIFY APP
 
-Can be found at spotify-personal.herokuapp.com
+App can be found [here](spotify-personal.herokuapp.com )
 
 App was made using the Spotify API. Through the help of React, Materialize and basic HTML and CSS the app extracts data from signed in users and displays data not found in the offical Spotify App and website. Below are examples of what the site looks like.
 
